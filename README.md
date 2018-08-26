@@ -1,4 +1,4 @@
-# The King's Bird ASL 0.1.0
+# The King's Bird ASL 1.0.0
 A LiveSplit autosplitter for [The King's Bird](http://serenityforge.com/games/thekingsbird).
 
 ## Features
