@@ -2,7 +2,6 @@ state("TheKingsBird")
 {
 	int sceneId : 0x01051BD8, 0x4, 0x4, 0x74;
 	int sceneLoad : 0x01051BD8, 0x4, 0x4, 0x78;
-	int frameCounter : 0x0104FCE0;
 }
 
 startup
@@ -235,6 +234,7 @@ split
 			&& (settings["AllHubLevels"] || !vars.FirstLevels[fromHub]))
 			{
 				vars.Debug("Entered level.");
+				vars.FirstLevels[fromHub] = true;
 				return true;
 			}
 		}
@@ -270,7 +270,7 @@ split
 	
 	if(settings["ShrineEnter"])
 	{
-		int fromKingdom = Array.IndexOf(vars.Hubs, old.sceneId);
+		int fromKingdom = Array.IndexOf(vars.Kingdoms, old.sceneId);
 		if(fromKingdom >= 0)
 		{
 			int toShrine = Array.IndexOf(vars.Shrines, current.sceneId);
@@ -335,7 +335,7 @@ split
 	
 	if(settings["FallenExit"])
 	{
-		if(old.sceneId == vars.FallenKingdom && current.sceneId == vars.FallenForestKingdom)
+		if(old.sceneId == vars.FallenKingdom && current.sceneId == vars.FallenSkyKingdom)
 		{
 			vars.Debug("Finished fallen kingdom.");
 			return true;
