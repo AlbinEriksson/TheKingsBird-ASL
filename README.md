@@ -1,4 +1,4 @@
-# The King's Bird ASL 1.0.0
+# The King's Bird ASL 1.0.1
 A LiveSplit autosplitter for [The King's Bird](http://serenityforge.com/games/thekingsbird).
 
 ## Features
@@ -14,11 +14,14 @@ There are many options so you can customize the automatic splits to your prefere
  * Boss fight
    * Again, you can split before and after
  * End of the game
-   * Obviously. Note: Doesn't split until fadeout, 5 seconds too late (I'm working on it)
+   * Obviously
 
 ## How to install
-### ~~In LiveSplit~~
-Not yet, I will publish this to LiveSplit when I'm done with proper endgame timing.
+### In LiveSplit
+The easiest way to install this autosplitter is within LiveSplit itself.
+ 1. In "Edit Splits...", search for "The King's Bird" in the games list
+ 2. You should see that the autosplitter is available, so click "Activate"
+ 3. Click "Settings" and check the options you need
 ### Manually
 If you can't find it in LiveSplit itself, you can manually install it.
  1. Download TheKingsBird.asl
@@ -28,6 +31,5 @@ If you can't find it in LiveSplit itself, you can manually install it.
  5. Choose your options and start speedrunning!
 
 ## Missing Features
- * Fix endgame split
  * Confirm all spirit birds?
  * Fallen Kingdom checkpoints?
