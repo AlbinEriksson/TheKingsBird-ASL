@@ -7,7 +7,7 @@ state("TheKingsBird")
 startup
 {
 	settings.Add("AutoStart", true, "Start timer when restarting your save file");
-	settings.Add("AutoStartChapter", false, "Start timer when backtracking from a shrine (For individual kingdom runs);
+	settings.Add("AutoStartChapter", false, "Start timer when backtracking from a shrine (For individual kingdom runs)");
 	settings.Add("CagedDreamEnd", true, "Split after the introduction dream");
 	settings.Add("CagedKingdomEnd", true, "Split after leaving the caged kingdom");
 	settings.Add("ForestTutorialEnd", true, "Split after finishing the forest tutorial");
