@@ -167,7 +167,8 @@ start
 		if(fromShrine >= 0)
 		{
 			int toKingdom = Array.IndexOf(vars.Kingdoms, current.sceneId);
-			if(toKingdom >= 0 && toKingdom == fromShrine)
+			if((toKingdom == 0 && fromShrine == 0)
+			|| (toKingdom >  0 && fromShrine == toKingdom - 1))
 			{
 				vars.Debug("Starting individual kingdom run.");
 				return true;
