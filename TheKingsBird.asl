@@ -7,6 +7,7 @@ state("TheKingsBird")
 startup
 {
 	settings.Add("AutoStart", true, "Start timer when restarting your save file");
+	settings.Add("AutoStartChapter", false, "Start timer when backtracking from a shrine (For individual kingdom runs);
 	settings.Add("CagedDreamEnd", true, "Split after the introduction dream");
 	settings.Add("CagedKingdomEnd", true, "Split after leaving the caged kingdom");
 	settings.Add("ForestTutorialEnd", true, "Split after finishing the forest tutorial");
@@ -157,6 +158,20 @@ start
 		{
 			vars.Debug("Starting run.");
 			return true;
+		}
+	}
+	
+	if(settings["AutoStartChapter"])
+	{
+		int fromShrine = Array.IndexOf(vars.Shrines, old.sceneId);
+		if(fromShrine >= 0)
+		{
+			int toKingdom = Array.IndexOf(vars.Kingdoms, current.sceneId);
+			if(toKingdom >= 0 && toKingdom == fromShrine)
+			{
+				vars.Debug("Starting individual kingdom run.");
+				return true;
+			}
 		}
 	}
 	
