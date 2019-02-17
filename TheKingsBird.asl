@@ -52,11 +52,11 @@ startup
 	vars.MangroveVillage = 24;
 	vars.AncientTreeClimb = 21;
 	vars.RedwoodBranches = 22;
-    vars.CarvedEarthWoods = 25;
-    vars.Swamplands = 29;
-    vars.Underbrush = 26;
-    vars.LoamyGardens = 27;
-    vars.ShadedMire = 28;
+	vars.CarvedEarthWoods = 25;
+	vars.Swamplands = 29;
+	vars.Underbrush = 26;
+	vars.LoamyGardens = 27;
+	vars.ShadedMire = 28;
 	vars.OwlShrine = 30;
 	vars.ForestDream = 98;
 	vars.LakeKingdom = 31;
@@ -80,12 +80,12 @@ startup
 	vars.TheVault = 94;
 	vars.CliffsideCavern = 97;
 	vars.CrystalCave = 95;
-    vars.GreenhouseDistrict = 87;
-    vars.LakeCastle = 92;
-    vars.TheLibrary = 90;
-    vars.WildCourtyards = 88;
-    vars.Acropolis = 91;
-    vars.CliffGallery = 89;
+	vars.GreenhouseDistrict = 87;
+	vars.LakeCastle = 92;
+	vars.TheLibrary = 90;
+	vars.WildCourtyards = 88;
+	vars.Acropolis = 91;
+	vars.CliffGallery = 89;
 	vars.HeronShrine = 32;
 	vars.LakeDream = 71;
 	vars.SkyKingdom = 33;
@@ -109,11 +109,11 @@ startup
 	vars.TheAgora = 60;
 	vars.RuinedCitadel = 58;
 	vars.HangingGardens = 57;
-    vars.BuriedIsles = 61;
-    vars.CrumblingWells = 63;
-    vars.WindmillGraveyard = 62;
-    vars.TheGorge = 65;
-    vars.TheRoosts = 64;
+	vars.BuriedIsles = 61;
+	vars.CrumblingWells = 63;
+	vars.WindmillGraveyard = 62;
+	vars.TheGorge = 65;
+	vars.TheRoosts = 64;
 	vars.EagleShrine = 34;
 	vars.SkyDream = 35;
 	vars.FallenKingdom = 36;
@@ -143,19 +143,19 @@ startup
 		vars.AbandonedMarket,   vars.WildOrchard,        vars.HiddenVillage,    vars.ThornyGrove,     0,
 		vars.HighCanopy,        vars.FoggyForest,        vars.Briar,            vars.TheGrotto,       0,
 		vars.RootCaverns,       vars.MangroveVillage,    vars.AncientTreeClimb, vars.RedwoodBranches, 0,
-        vars.Swamplands,        vars.Underbrush,         vars.LoamyGardens      vars.ShadedMire,      0,
+        	vars.Swamplands,        vars.Underbrush,         vars.LoamyGardens      vars.ShadedMire,      0,
 
 		vars.UndergroundStream, vars.TheOldCity,         vars.FloodedVillage,   vars.OvergrownRuins,  0,
 		vars.TheAcademy,        vars.TunnelLabyrinth,    vars.Colonnade,        vars.Rooftops,        0,
 		vars.PlazaRuins,        vars.WaterfallMountains, vars.LakesideSlides,   vars.TheCistern,      0,
 		vars.CrumbledChurch,    vars.TheVault,           vars.CliffsideCavern,  vars.CrystalCave,     0,
-        vars.LakeCastle,        vars.TheLibrary,         vars.WildCourtyards,   vars.Acropolis,       vars.CliffGallery,
+        	vars.LakeCastle,        vars.TheLibrary,         vars.WildCourtyards,   vars.Acropolis,       vars.CliffGallery,
 
 		vars.TheCascades,       vars.LiftedArches,       vars.TheLowerCity,     vars.FallenTowers,    0,
 		vars.RoyalGarden,       vars.IslandHamlet,       vars.TheColosseum,     vars.Aqueducts,       0,
 		vars.GrandPortico,      vars.TheOutskirts,       vars.CollapsedBridge,  vars.PrisonMines,     0,
 		vars.FoggyWindmills,	vars.TheAgora,           vars.RuinedCitadel,    vars.HangingGardens,  0,
-        vars.CrumblingWells,    vars.WindmillGraveyard,  vars.TheGorge,         vars.TheRoosts,       0
+        	vars.CrumblingWells,    vars.WindmillGraveyard,  vars.TheGorge,         vars.TheRoosts,       0
 	};
 
 	vars.VisitedHubs = new bool[15];
