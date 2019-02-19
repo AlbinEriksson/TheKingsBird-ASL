@@ -144,7 +144,7 @@ startup
 		vars.AbandonedMarket,   vars.WildOrchard,        vars.HiddenVillage,    vars.ThornyGrove,     0,
 		vars.HighCanopy,        vars.FoggyForest,        vars.Briar,            vars.TheGrotto,       0,
 		vars.RootCaverns,       vars.MangroveVillage,    vars.AncientTreeClimb, vars.RedwoodBranches, 0,
-        	vars.Swamplands,        vars.Underbrush,         vars.LoamyGardens      vars.ShadedMire,      0,
+        	vars.Swamplands,        vars.Underbrush,         vars.LoamyGardens,      vars.ShadedMire,      0,
 
 		vars.UndergroundStream, vars.TheOldCity,         vars.FloodedVillage,   vars.OvergrownRuins,  0,
 		vars.TheAcademy,        vars.TunnelLabyrinth,    vars.Colonnade,        vars.Rooftops,        0,
