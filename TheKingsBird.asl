@@ -135,8 +135,8 @@ startup
 	vars.Shrines = new int[] {vars.OwlShrine, vars.HeronShrine, vars.EagleShrine};
 	vars.Dreams = new int[] {vars.ForestDream, vars.LakeDream, vars.SkyDream};
 	vars.Hubs = new int[] {
-		vars.QuietValleyWoods,  vars.CliffdropWoods,   vars.DrippingVineWoods, vars.BranchstepWoods, vars.CarvedEarthWoods
-		vars.RiverwaysDistrict, vars.ScholarsDistrict, vars.WallsideDistrict,  vars.ShadesDistrict,  vars.GreenhouseDistrict
+		vars.QuietValleyWoods,  vars.CliffdropWoods,   vars.DrippingVineWoods, vars.BranchstepWoods, vars.CarvedEarthWoods,
+		vars.RiverwaysDistrict, vars.ScholarsDistrict, vars.WallsideDistrict,  vars.ShadesDistrict,  vars.GreenhouseDistrict,
 		vars.SunriseGateIsles,  vars.PromenadeIsles,   vars.KeystoneIsles,     vars.ForgottenIsles,  vars.BuriedIsles
 	};
 	vars.Levels = new int[] {
