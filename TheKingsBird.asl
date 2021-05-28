@@ -2,6 +2,7 @@ state("TheKingsBird")
 {
 	int sceneId : 0x01051BD8, 0x4, 0x4, 0x74;
 	int sceneLoad : 0x01051BD8, 0x4, 0x4, 0x78;
+	int birdCount : 0x01006E78, 0x198, 0x90C, 0x438, 0x14, 0x14C, 0xFC8;
 }
 
 startup
@@ -15,6 +16,7 @@ startup
 	settings.Add("FirstHubLevel", false, "Split when entering your first level in a hub");
 	settings.Add("AllHubLevels", false, "Split when entering any new level", "FirstHubLevel");
 	settings.Add("LevelEnd", true, "Split when exiting/finishing a level");
+	settings.Add("LevelEndWithBirds", false, "Split when finishing a level with all spirit birds", "LevelEnd");
 	settings.Add("HubEnd", false, "Split when leaving a hub");
 	settings.Add("ShrineEnter", false, "Split when entering a shrine (through left entrance)");
 	settings.Add("ShrineDreamEnter", false, "Split when a shrine dream starts");
@@ -158,6 +160,25 @@ startup
 		vars.FoggyWindmills,	vars.TheAgora,           vars.RuinedCitadel,    vars.HangingGardens,  0,
         	vars.CrumblingWells,    vars.WindmillGraveyard,  vars.TheGorge,         vars.TheRoosts,       0
 	};
+	vars.TotalBirds = new int[] {
+		12, 18, 9, 11, 0,
+		24, 16, 8, 8, 0,
+		10, 15, 12, 15, 0,
+		8, 9, 21, 12, 0,
+		6, 13, 7, 9, 0,
+
+		9, 14, 9, 20, 0,
+		19, 11, 11, 15, 0,
+		12, 16, 14, 23, 0,
+		24, 20, 13, 24, 0,
+		8, 7, 10, 9, 13,
+
+		19, 18, 6, 25, 0,
+		10, 8, 13, 9, 0,
+		26, 9, 10, 8, 0,
+		24, 7, 9, 9, 0,
+		8, 10, 10, 15, 0,
+	};
 
 	vars.VisitedHubs = new bool[15];
 	vars.FirstLevels = new bool[15];
@@ -283,8 +304,20 @@ split
 			int toHub = Array.IndexOf(vars.Hubs, current.sceneId);
 			if(toHub >= 0 && fromLevel / 5 == toHub)
 			{
-				vars.Debug("Exited/finished level.");
-				return true;
+				if(settings["LevelEndWithBirds"])
+				{
+					int maxBirdCount = vars.TotalBirds[fromLevel];
+					if(maxBirdCount == current.birdCount)
+					{
+						vars.Debug("Finished level with all spirit birds.");
+						return true;
+					}
+				}
+				else
+				{
+					vars.Debug("Exited/finished level.");
+					return true;
+				}
 			}
 		}
 	}
